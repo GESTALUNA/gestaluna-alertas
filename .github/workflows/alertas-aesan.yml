@@ -1,0 +1,39 @@
+name: Alertas AESAN
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: alertas-aesan
+  cancel-in-progress: false
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Leer AESAN y actualizar alertas.json
+        run: python robot/aesan_alertas.py
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "robot-gestaluna"
+          git config user.email "robot-gestaluna@users.noreply.github.com"
+          git add alertas.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "Alertas AESAN $(date -u +%Y-%m-%d)"
+            git push
+          fi
