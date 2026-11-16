@@ -1,6 +1,70 @@
 {
-  "actualizado": null,
+  "actualizado": "2026-11-16T15:25:11+00:00",
   "fuente": "AESAN - Red de alerta alimentaria (https://www.aesan.gob.es/es/alertas)",
-  "alertas": [],
-  "revisadas": []
+  "alertas": [
+    {
+      "id": "2026_81",
+      "ref": "ES2026/678",
+      "titulo": "error_outline 10 Noviembre 2026 Alerta por posible presencia de Listeria monocytogenes en productos lácteos procedentes de España. (Ref.ES2026/678) Ver más",
+      "fecha": "2026-11-10",
+      "motivo": "Listeria",
+      "gravedad": "alta",
+      "url": "https://www.aesan.gob.es/alertas/2026_81"
+    },
+    {
+      "id": "2026_80",
+      "ref": "ES2026/665",
+      "titulo": "error_outline 04 Noviembre 2026 Alerta por presencia de Listeria monocytogenes en jamón cocido procedente de España (Ref. ES2026/665) Ver más",
+      "fecha": "2026-11-04",
+      "motivo": "Listeria",
+      "gravedad": "alta",
+      "url": "https://www.aesan.gob.es/alertas/2026_80"
+    },
+    {
+      "id": "2026_79",
+      "ref": "ES2026/659",
+      "titulo": "error_outline 04 Noviembre 2026 Alerta por presencia de Salmonella en kéfir de cabra procedente de España. (Ref. ES2026/659). Ver más",
+      "fecha": "2026-11-04",
+      "motivo": "Salmonella",
+      "gravedad": "media",
+      "url": "https://www.aesan.gob.es/alertas/2026_79"
+    },
+    {
+      "id": "2026_75",
+      "ref": "ES2026/648",
+      "titulo": "error_outline 26 Octubre 2026 Alerta por presencia de Salmonella en tahini de sésamo procedente de Egipto. (Ref. ES2026/648) Ver más",
+      "fecha": "2026-10-26",
+      "motivo": "Salmonella",
+      "gravedad": "media",
+      "url": "https://www.aesan.gob.es/alertas/2026_75"
+    },
+    {
+      "id": "2026_74",
+      "ref": "ES2026/642",
+      "titulo": "error_outline 23 Octubre 2026 Alerta por presencia de Salmonella spp. en clara de huevo pasteurizada. (Ref. ES2026/642) Ver más",
+      "fecha": "2026-10-23",
+      "motivo": "Salmonella",
+      "gravedad": "media",
+      "url": "https://www.aesan.gob.es/alertas/2026_74"
+    }
+  ],
+  "revisadas": [
+    "2026_83",
+    "2026_81",
+    "2026_79",
+    "2026_80",
+    "2026_76",
+    "2026_75",
+    "2026_74",
+    "2026_77",
+    "2026_69",
+    "2026_68",
+    "2026_65",
+    "2026_78",
+    "2026_71",
+    "2026_70",
+    "2026_67",
+    "2026_66",
+    "2026_50"
+  ]
 }
