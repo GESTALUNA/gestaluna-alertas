@@ -1,0 +1,42 @@
+{
+  "actualizado": "2026-11-16T13:21:50+00:00",
+  "fuente": "AESAN - Red de alerta alimentaria (https://www.aesan.gob.es/es/alertas)",
+  "alertas": [
+    {
+      "id": "2026_81",
+      "ref": "ES2026/678",
+      "titulo": "Alerta por posible presencia de Listeria monocytogenes en productos lácteos procedentes de España",
+      "fecha": "2026-11-10",
+      "motivo": "Listeria",
+      "gravedad": "alta",
+      "url": "https://www.aesan.gob.es/alertas/2026_81"
+    },
+    {
+      "id": "2026_80",
+      "ref": "ES2026/665",
+      "titulo": "Presencia de Listeria monocytogenes en jamón cocido de España",
+      "fecha": "2026-11-04",
+      "motivo": "Listeria",
+      "gravedad": "alta",
+      "url": "https://www.aesan.gob.es/alertas/2026_80"
+    },
+    {
+      "id": "2026_79",
+      "ref": "ES2026/659",
+      "titulo": "Alerta por presencia de Salmonella en kéfir de cabra procedente de España",
+      "fecha": "2026-11-04",
+      "motivo": "Salmonella",
+      "gravedad": "media",
+      "url": "https://www.aesan.gob.es/alertas/2026_79"
+    },
+    {
+      "id": "2026_70_amp",
+      "ref": "ES2026/600",
+      "titulo": "Ampliación de alerta por mercurio en pez espada",
+      "fecha": "2026-11-01",
+      "motivo": "Contaminante químico",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_70_amp"
+    }
+  ]
+}

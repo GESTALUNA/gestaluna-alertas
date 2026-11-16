@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestaluna · demo alertas AESAN</title>
+<style>
+  body{font-family:system-ui,-apple-system,sans-serif;background:#f6f1f4;margin:0;padding:20px;max-width:420px}
+  h1{font-size:1.2rem} h2.sec{font-size:1rem;margin-top:32px}
+  button.reset{margin-top:20px}
+</style>
+</head>
+<body>
+  <h1>Hola 👋 · Semana 24</h1>
+  <div id="alertas-inicio"></div>
+
+  <h2 class="sec">Apartado «Alertas» (todas las recientes)</h2>
+  <div id="alertas-apartado"></div>
+
+  <button class="reset" onclick="localStorage.clear();location.reload()">Reiniciar demo</button>
+
+  <script src="alertas-aesan.js"></script>
+  <script>
+    // En la demo se usa un archivo de ejemplo; en la app real se usa el del robot
+    GestalunaAlertas.config.url = "demo-alertas.json";
+    GestalunaAlertas.config.diasInicio = 3650;
+    GestalunaAlertas.config.diasApartado = 3650;
+    GestalunaAlertas.mostrar("#alertas-inicio");
+    GestalunaAlertas.mostrar("#alertas-apartado", { todas: true });
+  </script>
+</body>
+</html>
