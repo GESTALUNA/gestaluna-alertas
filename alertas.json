@@ -1,11 +1,21 @@
 {
-  "actualizado": "2026-11-18T07:33:36+00:00",
+  "version": 2,
+  "actualizado": "2026-11-18T08:42:46+00:00",
   "fuente": "AESAN - Red de alerta alimentaria (https://www.aesan.gob.es/es/alertas)",
   "alertas": [
     {
+      "id": "2026_83",
+      "ref": "ES2026/681",
+      "titulo": "cookie 13 Noviembre 2026 Retirada de la alerta por presencia de sulfitos no declarados en el etiquetado de gamba blanca congelada procedente de Senegal",
+      "fecha": "2026-11-13",
+      "motivo": "Alérgenos",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_83"
+    },
+    {
       "id": "2026_81",
       "ref": "ES2026/678",
-      "titulo": "error_outline 10 Noviembre 2026 Alerta por posible presencia de Listeria monocytogenes en productos lácteos procedentes de España. (Ref.ES2026/678) Ver más",
+      "titulo": "Alerta por posible presencia de Listeria monocytogenes en productos lácteos procedentes de España",
       "fecha": "2026-11-10",
       "motivo": "Listeria",
       "gravedad": "alta",
@@ -14,7 +24,7 @@
     {
       "id": "2026_80",
       "ref": "ES2026/665",
-      "titulo": "error_outline 04 Noviembre 2026 Alerta por presencia de Listeria monocytogenes en jamón cocido procedente de España (Ref. ES2026/665) Ver más",
+      "titulo": "Alerta por presencia de Listeria monocytogenes en jamón cocido procedente de España",
       "fecha": "2026-11-04",
       "motivo": "Listeria",
       "gravedad": "alta",
@@ -23,16 +33,43 @@
     {
       "id": "2026_79",
       "ref": "ES2026/659",
-      "titulo": "error_outline 04 Noviembre 2026 Alerta por presencia de Salmonella en kéfir de cabra procedente de España. (Ref. ES2026/659). Ver más",
+      "titulo": "Alerta por presencia de Salmonella en kéfir de cabra procedente de España",
       "fecha": "2026-11-04",
       "motivo": "Salmonella",
       "gravedad": "media",
       "url": "https://www.aesan.gob.es/alertas/2026_79"
     },
     {
+      "id": "2026_78",
+      "ref": "ES2026/654",
+      "titulo": "pill 28 Octubre 2026 Alerta por presencia de sildenafilo en complemento alimenticio procedente de Perú",
+      "fecha": "2026-10-28",
+      "motivo": "Otros",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_78"
+    },
+    {
+      "id": "2026_77",
+      "ref": "ES2026/655",
+      "titulo": "cookie 28 Octubre 2026 Advertencia para personas con alergia al huevo: Presencia de huevo no declarado en preparación de surimi con gambas procedente de España",
+      "fecha": "2026-10-28",
+      "motivo": "Alérgenos",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_77"
+    },
+    {
+      "id": "2026_76",
+      "ref": "ES2026/647",
+      "titulo": "Alerta por posible presencia de fragmentos de cristal en pudding procedente de Dinamarca",
+      "fecha": "2026-10-27",
+      "motivo": "Otros",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_76"
+    },
+    {
       "id": "2026_75",
       "ref": "ES2026/648",
-      "titulo": "error_outline 26 Octubre 2026 Alerta por presencia de Salmonella en tahini de sésamo procedente de Egipto. (Ref. ES2026/648) Ver más",
+      "titulo": "Alerta por presencia de Salmonella en tahini de sésamo procedente de Egipto",
       "fecha": "2026-10-26",
       "motivo": "Salmonella",
       "gravedad": "media",
@@ -41,11 +78,83 @@
     {
       "id": "2026_74",
       "ref": "ES2026/642",
-      "titulo": "error_outline 23 Octubre 2026 Alerta por presencia de Salmonella spp. en clara de huevo pasteurizada. (Ref. ES2026/642) Ver más",
+      "titulo": "Alerta por presencia de Salmonella spp. en clara de huevo pasteurizada",
       "fecha": "2026-10-23",
       "motivo": "Salmonella",
       "gravedad": "media",
       "url": "https://www.aesan.gob.es/alertas/2026_74"
+    },
+    {
+      "id": "2026_71",
+      "ref": "ES2026/606",
+      "titulo": "pill 09 Octubre 2026 Alerta por presencia de sildenafilo en complementos alimenticios de origen desconocido",
+      "fecha": "2026-10-09",
+      "motivo": "Otros",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_71"
+    },
+    {
+      "id": "2026_70",
+      "ref": "ES2026/604",
+      "titulo": "pill 08 Octubre 2026 Alerta por presencia de sildenafilo en complemento alimenticio",
+      "fecha": "2026-10-08",
+      "motivo": "Otros",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_70"
+    },
+    {
+      "id": "2026_69",
+      "ref": "ES2026/597",
+      "titulo": "cookie 05 Octubre 2026 Advertencia por presencia de gluten: presencia de gluten en tostadas de trigo sarraceno procedentes de España",
+      "fecha": "2026-10-05",
+      "motivo": "Alérgenos",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_69"
+    },
+    {
+      "id": "2026_68",
+      "ref": "ES2026/575",
+      "titulo": "cookie 25 Septiembre 2026 Advertencia para personas con alergia al cacahuete: Presencia de cacahuete no declarado en uno de los campos del etiquetado en helado procedente de España",
+      "fecha": "2026-09-25",
+      "motivo": "Alérgenos",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_68"
+    },
+    {
+      "id": "2026_67",
+      "ref": "ES2026/543",
+      "titulo": "pill 09 Septiembre 2026 Alerta por elevado contenido de melatonina en complemento alimenticio procedente de Estados Unidos",
+      "fecha": "2026-09-09",
+      "motivo": "Otros",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_67"
+    },
+    {
+      "id": "2026_66",
+      "ref": "ES2026/535",
+      "titulo": "pill 02 Septiembre 2026 Alerta por presencia de sibutramina en complementos alimenticios",
+      "fecha": "2026-09-02",
+      "motivo": "Otros",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_66"
+    },
+    {
+      "id": "2026_65",
+      "ref": "ES2026/517",
+      "titulo": "cookie 26 Agosto 2026 Advertencia por presencia de gluten: gluten no declarado en salsas etiquetadas \"sin gluten\" procedentes de España",
+      "fecha": "2026-08-26",
+      "motivo": "Alérgenos",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_65"
+    },
+    {
+      "id": "2026_50",
+      "ref": "ES2026/370",
+      "titulo": "pill 19 Junio 2026 Alerta por presencia de sildenafilo y tadalafilo en complemento alimenticio procedente de Turquía",
+      "fecha": "2026-06-19",
+      "motivo": "Otros",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_50"
     }
   ],
   "revisadas": [
