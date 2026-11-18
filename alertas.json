@@ -1,12 +1,12 @@
 {
-  "version": 2,
-  "actualizado": "2026-11-18T08:42:46+00:00",
+  "version": 3,
+  "actualizado": "2026-11-18T08:44:39+00:00",
   "fuente": "AESAN - Red de alerta alimentaria (https://www.aesan.gob.es/es/alertas)",
   "alertas": [
     {
       "id": "2026_83",
       "ref": "ES2026/681",
-      "titulo": "cookie 13 Noviembre 2026 Retirada de la alerta por presencia de sulfitos no declarados en el etiquetado de gamba blanca congelada procedente de Senegal",
+      "titulo": "Retirada de la alerta por presencia de sulfitos no declarados en el etiquetado de gamba blanca congelada procedente de Senegal",
       "fecha": "2026-11-13",
       "motivo": "Alérgenos",
       "gravedad": "baja",
@@ -42,7 +42,7 @@
     {
       "id": "2026_78",
       "ref": "ES2026/654",
-      "titulo": "pill 28 Octubre 2026 Alerta por presencia de sildenafilo en complemento alimenticio procedente de Perú",
+      "titulo": "Alerta por presencia de sildenafilo en complemento alimenticio procedente de Perú",
       "fecha": "2026-10-28",
       "motivo": "Otros",
       "gravedad": "baja",
@@ -51,7 +51,7 @@
     {
       "id": "2026_77",
       "ref": "ES2026/655",
-      "titulo": "cookie 28 Octubre 2026 Advertencia para personas con alergia al huevo: Presencia de huevo no declarado en preparación de surimi con gambas procedente de España",
+      "titulo": "Advertencia para personas con alergia al huevo: Presencia de huevo no declarado en preparación de surimi con gambas procedente de España",
       "fecha": "2026-10-28",
       "motivo": "Alérgenos",
       "gravedad": "baja",
@@ -87,7 +87,7 @@
     {
       "id": "2026_71",
       "ref": "ES2026/606",
-      "titulo": "pill 09 Octubre 2026 Alerta por presencia de sildenafilo en complementos alimenticios de origen desconocido",
+      "titulo": "Alerta por presencia de sildenafilo en complementos alimenticios de origen desconocido",
       "fecha": "2026-10-09",
       "motivo": "Otros",
       "gravedad": "baja",
@@ -96,7 +96,7 @@
     {
       "id": "2026_70",
       "ref": "ES2026/604",
-      "titulo": "pill 08 Octubre 2026 Alerta por presencia de sildenafilo en complemento alimenticio",
+      "titulo": "Alerta por presencia de sildenafilo en complemento alimenticio",
       "fecha": "2026-10-08",
       "motivo": "Otros",
       "gravedad": "baja",
@@ -105,7 +105,7 @@
     {
       "id": "2026_69",
       "ref": "ES2026/597",
-      "titulo": "cookie 05 Octubre 2026 Advertencia por presencia de gluten: presencia de gluten en tostadas de trigo sarraceno procedentes de España",
+      "titulo": "Advertencia por presencia de gluten: presencia de gluten en tostadas de trigo sarraceno procedentes de España",
       "fecha": "2026-10-05",
       "motivo": "Alérgenos",
       "gravedad": "baja",
@@ -114,7 +114,7 @@
     {
       "id": "2026_68",
       "ref": "ES2026/575",
-      "titulo": "cookie 25 Septiembre 2026 Advertencia para personas con alergia al cacahuete: Presencia de cacahuete no declarado en uno de los campos del etiquetado en helado procedente de España",
+      "titulo": "Advertencia para personas con alergia al cacahuete: Presencia de cacahuete no declarado en uno de los campos del etiquetado en helado procedente de España",
       "fecha": "2026-09-25",
       "motivo": "Alérgenos",
       "gravedad": "baja",
@@ -123,7 +123,7 @@
     {
       "id": "2026_67",
       "ref": "ES2026/543",
-      "titulo": "pill 09 Septiembre 2026 Alerta por elevado contenido de melatonina en complemento alimenticio procedente de Estados Unidos",
+      "titulo": "Alerta por elevado contenido de melatonina en complemento alimenticio procedente de Estados Unidos",
       "fecha": "2026-09-09",
       "motivo": "Otros",
       "gravedad": "baja",
@@ -132,7 +132,7 @@
     {
       "id": "2026_66",
       "ref": "ES2026/535",
-      "titulo": "pill 02 Septiembre 2026 Alerta por presencia de sibutramina en complementos alimenticios",
+      "titulo": "Alerta por presencia de sibutramina en complementos alimenticios",
       "fecha": "2026-09-02",
       "motivo": "Otros",
       "gravedad": "baja",
@@ -141,7 +141,7 @@
     {
       "id": "2026_65",
       "ref": "ES2026/517",
-      "titulo": "cookie 26 Agosto 2026 Advertencia por presencia de gluten: gluten no declarado en salsas etiquetadas \"sin gluten\" procedentes de España",
+      "titulo": "Advertencia por presencia de gluten: gluten no declarado en salsas etiquetadas \"sin gluten\" procedentes de España",
       "fecha": "2026-08-26",
       "motivo": "Alérgenos",
       "gravedad": "baja",
@@ -150,7 +150,7 @@
     {
       "id": "2026_50",
       "ref": "ES2026/370",
-      "titulo": "pill 19 Junio 2026 Alerta por presencia de sildenafilo y tadalafilo en complemento alimenticio procedente de Turquía",
+      "titulo": "Alerta por presencia de sildenafilo y tadalafilo en complemento alimenticio procedente de Turquía",
       "fecha": "2026-06-19",
       "motivo": "Otros",
       "gravedad": "baja",
