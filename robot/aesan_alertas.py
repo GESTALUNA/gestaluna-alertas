@@ -4,8 +4,8 @@ Robot de alertas AESAN para Gestaluna.
 
 Una vez al día (lo lanza GitHub Actions):
   1. Lee las últimas alertas publicadas por AESAN.
-  2. Se queda con las que importan en el embarazo (Listeria, Salmonella,
-     Toxoplasma, E. coli, contaminantes químicos...).
+  2. Las guarda TODAS (sin filtrar) y les pone una etiqueta según el motivo
+     (Listeria, Salmonella, alérgenos...).
   3. Guarda el resultado en alertas.json, que la app lee al abrirse.
 
 Solo usa la librería estándar de Python: no hay nada que instalar.
@@ -30,14 +30,16 @@ ARCHIVO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "alerta
 
 DIAS_A_CONSERVAR = 180     # alertas más antiguas se borran del archivo
 MAX_ALERTAS = 50
+VERSION_ARCHIVO = 2        # subir este número obliga a releer todas las alertas
 MAX_REVISADAS = 400        # memoria de alertas ya leídas (relevantes o no)
 
 # Patrón de las direcciones de cada alerta: /alertas/2026_81 o /alertas/2026_81_amp
 RE_ENLACE = re.compile(r"/alertas/(\d{4}_\d+(?:_amp\d*)?)/?$", re.I)
 
 # ---------------------------------------------------------------------------
-# Peligros relevantes en el embarazo. Se busca en el TÍTULO de la alerta
+# Etiquetas según el peligro. Se busca en el TÍTULO de la alerta
 # (AESAN siempre nombra el peligro en el título). Orden = prioridad.
+# No filtra: las alertas que no encajan reciben la etiqueta "Alérgenos" u "Otros".
 # ---------------------------------------------------------------------------
 PELIGROS = [
     {
@@ -85,8 +87,7 @@ PELIGROS = [
     },
 ]
 
-# Alertas que SOLO afectan a personas alérgicas: se descartan salvo que además
-# nombren uno de los peligros de arriba.
+# Alertas para personas alérgicas o intolerantes (etiqueta "Alérgenos")
 CLAVES_SOLO_ALERGIA = ["alergi", "intoleranc", "alergeno", "no declarad", "sulfito", "gluten"]
 
 
@@ -191,12 +192,14 @@ def leer_detalle(html_pagina):
 
 
 def clasificar(titulo):
-    """Devuelve el peligro (dict) si la alerta interesa en el embarazo, o None."""
+    """Devuelve la etiqueta de la alerta. Nunca descarta ninguna."""
     t = normalizar(titulo)
     for peligro in PELIGROS:
         if any(clave in t for clave in peligro["claves"]):
             return peligro
-    return None   # incluye las alertas solo de alérgenos, cuerpos extraños, etc.
+    if any(clave in t for clave in CLAVES_SOLO_ALERGIA):
+        return {"motivo": "Alérgenos", "gravedad": "baja"}
+    return {"motivo": "Otros", "gravedad": "baja"}
 
 
 def referencia(titulo):
@@ -204,8 +207,17 @@ def referencia(titulo):
     return m.group(1).replace(" ", "") if m else None
 
 
+def limpiar_texto_listado(texto):
+    """El enlace del listado incluye icono, fecha y "Ver más": se quitan."""
+    t = re.sub(r"\b(error_outline|warning|info|campaign|notifications?)\b", " ", texto)
+    t = re.sub(r"^\s*\d{1,2}\s+(?:de\s+)?[A-Za-zÁÉÍÓÚáéíóú]+\s+(?:de\s+)?20\d{2}\s*", "", t.strip())
+    t = re.sub(r"\s*(Ver más|Leer más)\s*$", "", t, flags=re.I)
+    return " ".join(t.split())
+
+
 def titulo_limpio(titulo):
     """Quita la referencia del final y el punto sobrante para mostrarlo en la app."""
+    titulo = limpiar_texto_listado(titulo)
     t = re.sub(r"\s*\(?\s*Ref\.?\s*ES\s?\d{4}/\d+\s*\)?\s*\.?\s*$", "", titulo, flags=re.I)
     return t.rstrip(" .")
 
@@ -221,6 +233,8 @@ def cargar_archivo():
 def main():
     hoy = dt.date.today()
     datos = cargar_archivo()
+    if datos.get("version") != VERSION_ARCHIVO:   # cambio de formato: se empieza de cero
+        datos = {"alertas": [], "revisadas": []}
     alertas = {a["id"]: a for a in datos.get("alertas", [])}
     revisadas = list(datos.get("revisadas", []))
 
@@ -247,8 +261,10 @@ def main():
         titulo, fecha = info["titulo"], None
         try:
             t2, fecha = leer_detalle(descargar(info["url"]))
-            if t2 and len(t2) > len(titulo or ""):
-                titulo = t2
+            # Se elige el título más completo (preferiblemente el que lleva la referencia ES20xx/...)
+            candidatos = [limpiar_texto_listado(x) for x in (t2, titulo) if x]
+            candidatos.sort(key=lambda x: (referencia(x) is not None, len(x)), reverse=True)
+            titulo = candidatos[0] if candidatos else titulo
         except Exception as e:
             print(f"Aviso: no se pudo abrir {info['url']}: {e}")
             continue   # se reintentará mañana
@@ -256,9 +272,6 @@ def main():
             continue
         revisadas.append(ident)
         peligro = clasificar(titulo)
-        if not peligro:
-            print(f"  descartada: {titulo}")
-            continue
         alertas[ident] = {
             "id": ident,
             "ref": referencia(titulo),
@@ -276,6 +289,7 @@ def main():
     lista = sorted((a for a in alertas.values() if a["fecha"] >= limite),
                    key=lambda a: (a["fecha"], a["id"]), reverse=True)[:MAX_ALERTAS]
     salida = {
+        "version": VERSION_ARCHIVO,
         "actualizado": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),
         "fuente": "AESAN - Red de alerta alimentaria (https://www.aesan.gob.es/es/alertas)",
         "alertas": lista,
@@ -284,7 +298,7 @@ def main():
     with open(ARCHIVO, "w", encoding="utf-8") as f:
         json.dump(salida, f, ensure_ascii=False, indent=2)
         f.write("\n")
-    print(f"Listo: {len(listado)} alertas en AESAN, {nuevas} nuevas relevantes, {len(lista)} en el archivo.")
+    print(f"Listo: {len(listado)} alertas en AESAN, {nuevas} nuevas, {len(lista)} en el archivo.")
 
 
 if __name__ == "__main__":
