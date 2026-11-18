@@ -30,7 +30,7 @@ ARCHIVO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "alerta
 
 DIAS_A_CONSERVAR = 180     # alertas más antiguas se borran del archivo
 MAX_ALERTAS = 50
-VERSION_ARCHIVO = 2        # subir este número obliga a releer todas las alertas
+VERSION_ARCHIVO = 3        # subir este número obliga a releer todas las alertas
 MAX_REVISADAS = 400        # memoria de alertas ya leídas (relevantes o no)
 
 # Patrón de las direcciones de cada alerta: /alertas/2026_81 o /alertas/2026_81_amp
@@ -209,7 +209,8 @@ def referencia(titulo):
 
 def limpiar_texto_listado(texto):
     """El enlace del listado incluye icono, fecha y "Ver más": se quitan."""
-    t = re.sub(r"\b(error_outline|warning|info|campaign|notifications?)\b", " ", texto)
+    # Quita el nombre del icono (error_outline, cookie, pill...) que va delante de la fecha
+    t = re.sub(r"^\s*[a-z_]+\s+(?=\d{1,2}\s)", "", texto)
     t = re.sub(r"^\s*\d{1,2}\s+(?:de\s+)?[A-Za-zÁÉÍÓÚáéíóú]+\s+(?:de\s+)?20\d{2}\s*", "", t.strip())
     t = re.sub(r"\s*(Ver más|Leer más)\s*$", "", t, flags=re.I)
     return " ".join(t.split())
