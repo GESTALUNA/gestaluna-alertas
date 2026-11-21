@@ -1,8 +1,35 @@
 {
   "version": 3,
-  "actualizado": "2026-11-20T07:34:29+00:00",
+  "actualizado": "2026-11-21T07:27:32+00:00",
   "fuente": "AESAN - Red de alerta alimentaria (https://www.aesan.gob.es/es/alertas)",
   "alertas": [
+    {
+      "id": "2026_87",
+      "ref": "ES2026/711",
+      "titulo": "Alerta por posible presencia de Salmonella Enteritidis en huevos procedentes de España",
+      "fecha": "2026-11-20",
+      "motivo": "Salmonella",
+      "gravedad": "media",
+      "url": "https://www.aesan.gob.es/alertas/2026_87"
+    },
+    {
+      "id": "2026_86",
+      "ref": "ES2026/711",
+      "titulo": "Ampliación de información sobre la alerta por posible presencia de Salmonella Enteritidis en huevos procedentes de España",
+      "fecha": "2026-11-20",
+      "motivo": "Salmonella",
+      "gravedad": "media",
+      "url": "https://www.aesan.gob.es/alertas/2026_86"
+    },
+    {
+      "id": "2026_84",
+      "ref": "ES2026/710",
+      "titulo": "Advertencia para personas con alergia a la soja y/o el cachuete e intolerancia a los sulfitos: Presencia de soja, cacahuete y/o sulfitos en helados procedentes de España",
+      "fecha": "2026-11-20",
+      "motivo": "Alérgenos",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_84"
+    },
     {
       "id": "2026_83",
       "ref": "ES2026/681",
@@ -174,6 +201,9 @@
     "2026_70",
     "2026_67",
     "2026_66",
-    "2026_50"
+    "2026_50",
+    "2026_84",
+    "2026_86",
+    "2026_87"
   ]
 }
