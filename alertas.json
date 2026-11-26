@@ -1,8 +1,17 @@
 {
   "version": 3,
-  "actualizado": "2026-11-25T07:41:28+00:00",
+  "actualizado": "2026-11-26T07:40:11+00:00",
   "fuente": "AESAN - Red de alerta alimentaria (https://www.aesan.gob.es/es/alertas)",
   "alertas": [
+    {
+      "id": "2026_88",
+      "ref": "ES2026/712",
+      "titulo": "Alerta por posible presencia de fragmentos de vidrio en frutos secos procedentes de España",
+      "fecha": "2026-11-25",
+      "motivo": "Otros",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_88"
+    },
     {
       "id": "2026_87",
       "ref": "ES2026/711",
@@ -204,6 +213,7 @@
     "2026_50",
     "2026_84",
     "2026_86",
-    "2026_87"
+    "2026_87",
+    "2026_88"
   ]
 }
