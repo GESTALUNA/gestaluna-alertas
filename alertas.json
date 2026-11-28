@@ -1,8 +1,17 @@
 {
   "version": 3,
-  "actualizado": "2026-11-27T07:38:51+00:00",
+  "actualizado": "2026-11-28T07:31:50+00:00",
   "fuente": "AESAN - Red de alerta alimentaria (https://www.aesan.gob.es/es/alertas)",
   "alertas": [
+    {
+      "id": "2026_89",
+      "ref": "ES2026/716",
+      "titulo": "Advertencia para personas con alergia a la mostaza: presencia de mostaza en noodles procedentes de Australia",
+      "fecha": "2026-11-27",
+      "motivo": "Alérgenos",
+      "gravedad": "baja",
+      "url": "https://www.aesan.gob.es/alertas/2026_89"
+    },
     {
       "id": "2026_88",
       "ref": "ES2026/712",
@@ -214,6 +223,7 @@
     "2026_84",
     "2026_86",
     "2026_87",
-    "2026_88"
+    "2026_88",
+    "2026_89"
   ]
 }
